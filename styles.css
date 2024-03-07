@@ -1,0 +1,253 @@
+/* Reset CSS */
+html, body, h1, h2, h3, p, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+/* Main container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Array container styles */
+.array-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Tile styles */
+.tile {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* User input styles */
+.user-input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-input input[type="text"] {
+    width: 200px;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-input button:hover {
+    background-color: #0056b3;
+}
+
+/* Controls styles */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.controls button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #218838;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+/* Steps container styles */
+#steps {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#steps::before {
+    content: 'Steps:';
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.step {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pass {
+    color: #28a745;
+}
+
+.array {
+    color: #007bff;
+}
+
+.comparison {
+    color: #dc3545;
+}
+
+.swap {
+    color: #ffc107;
+}
+
+.pass {
+    color: #4CAF50;
+    background-color: #e7f3e6;
+}
+
+.array {
+    color: #2196F3;
+    background-color: #e3f2fd;
+}
+
+.comparison {
+    color: #f44336;
+    background-color: #fdece9;
+}
+
+.swap {
+    color: #FFC107;
+    background-color: #fff9e8;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .user-input input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .user-input button,
+    .controls button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .controls label {
+        margin-bottom: 10px;
+    }
+
+    .step {
+        font-size: 14px;
+    }
+}
+
+/* Dropdown container styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown select element styles */
+#algorithmSelect {
+    padding: 10px 30px 10px 10px; /* Added padding on the right for arrow icon */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Remove default arrow icon */
+    -webkit-appearance: none; /* For older versions of webkit browsers */
+    -moz-appearance: none; /* For older versions of Firefox */
+}
+
+/* Dropdown arrow icon */
+.dropdown-arrow::after {
+    content: '\25BE'; /* Unicode character for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #555; /* Arrow icon color */
+}
+
+/* Dropdown hover effect */
+#algorithmSelect:hover,
+#algorithmSelect:focus {
+    border-color: #999;
+}
+
+/* Dropdown arrow icon on hover */
+#algorithmSelect:hover ~ .dropdown-arrow::after {
+    color: #333; /* Arrow icon color on hover */
+}
+
+/* Dropdown options container */
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+/* Dropdown options */
+/* #algorithmSelect:hover ~ .dropdown-options {
+    display: block;
+} */
+
+/* Dropdown option styles */
+#algorithmSelect option {
+    padding: 10px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Dropdown option hover effect */
+#algorithmSelect option:hover {
+    background-color: #eaeaea;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sorting Algorithm Visualizer</h1>
+    </header>
+    <div class="container">
+        <div class="array-container" id="arrayContainer"></div>
+        <div class="user-input">
+            <input type="text" id="userArrayInput" placeholder="Enter comma-separated numbers">
+            <button onclick="generateArray()">Generate Array</button>
+            <button onclick="generateRandomArray()">Random Array</button>
+        </div>
+        <div class="controls">
+            <button onclick="startSorting()">Start Sorting</button>
+            <div class="dropdown-container">
+                <select id="algorithmSelect" onchange="selectAlgorithm(this.value)">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                </select>
+                <div class="dropdown-arrow"></div>
+                <div class="dropdown-options">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                </div>
+            </div>
+            <label for="speed">Speed:</label>
+            <input type="range" id="speed" min="1" max="100" value="50">
+        </div>
+        <div id="selectedAlgorithmMessage"></div>
+    </div>
+    <aside id="codeDisplay">
+        <!-- Code for selected algorithm will be displayed here -->
+    </aside>
+    <div id="steps"></div>
+    <script src="script.js"></script>
+</body>
+</html>
